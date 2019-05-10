@@ -16,7 +16,8 @@ const defaultTypes = {
   banners: [],
   defaultBanner: DEFAULT_BANNER_IMAGE,
   duration: 2000,
-  height: 200,
+  height: 300,
+  width: '-webkit-fill-available',
   random: false,
 };
 
@@ -50,6 +51,7 @@ export default class Slider extends Component {
       defaultBanner,
       random,
       height,
+      width,
       ...rest
     } = this.props;
     const {
@@ -58,7 +60,7 @@ export default class Slider extends Component {
     const source = banners ? banners[index] : defaultBanner;
     return (
       <div style={{ textAlign: 'center' }}>
-        <img src={source} {...rest} alt={altText} height={height} />
+        <img src={source} {...rest} alt={altText} width={width} height={height} />
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Slider } from '../../Component/Slider/index';
 import { PUBLIC_IMAGE_FOLDER } from '../../config/constant';
+import Content from '../../Component/Content/Content'
 
 
 const banner = [
@@ -21,6 +22,7 @@ class Main extends Component {
     return (
       <>
         <Slider banners={banner} random />
+        <Content />
 
       </>
     );
